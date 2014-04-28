@@ -1,107 +1,32 @@
-# Apache Spark
+Useful Links for learning Scala    
+====
 
-Lightning-Fast Cluster Computing - <http://spark.apache.org/>
+1. [Scala overview from stackoverflow](http://stackoverflow.com/tags/scala/info)  
+2. [Programming in Scala by Martin Odersky](http://book.douban.com/subject/3338669/)  A cool textbook for scala
+1. [Scala School](http://twitter.github.io/scala_school/index.html) cheatsheet alike
+>About
+Scala school started as a series of lectures at Twitter to prepare experienced engineers to be productive Scala programmers. Scala is a relatively new language, but draws on many familiar concepts. Thus, these lectures assumed the audience knew the concepts and showed how to use them in Scala. We found this an effective way of getting new engineers up to speed quickly. This is the written material that accompanied those lectures. We have found that these are useful in their own right.
 
+2. [scala-cheat-sheet](https://github.com/soulmachine/scala-cheat-sheet)  
 
-## Online Documentation
+3. [Scala API Doc](http://www.scala-lang.org/api/current/index.html#package)  
+4. ***[Functional Programming Principles in Scala](https://www.coursera.org/course/progfun)***
+>Coursera:Learn about functional programming, and how it can be effectively combined with object-oriented programming. Gain practice in writing clean functional code, using the Scala programming language.  
+    
+    [Assignments](https://github.com/irwenqiang/functional-programming-principles-in-scala)    
 
-You can find the latest Spark documentation, including a programming
-guide, on the project webpage at <http://spark.apache.org/documentation.html>.
-This README file only contains basic setup instructions.
-
-
-## Building
-
-Spark requires Scala 2.10. The project is built using Simple Build Tool (SBT),
-which can be obtained [here](http://www.scala-sbt.org). If SBT is installed we
-will use the system version of sbt otherwise we will attempt to download it
-automatically. To build Spark and its example programs, run:
-
-    ./sbt/sbt assembly
-
-Once you've built Spark, the easiest way to start using it is the shell:
-
-    ./bin/spark-shell
-
-Or, for the Python API, the Python shell (`./bin/pyspark`).
-
-Spark also comes with several sample programs in the `examples` directory.
-To run one of them, use `./bin/run-example <class> <params>`. For example:
-
-    ./bin/run-example org.apache.spark.examples.SparkLR local[2]
-
-will run the Logistic Regression example locally on 2 CPUs.
-
-Each of the example programs prints usage help if no params are given.
-
-All of the Spark samples take a `<master>` parameter that is the cluster URL
-to connect to. This can be a mesos:// or spark:// URL, or "local" to run
-locally with one thread, or "local[N]" to run locally with N threads.
-
-## Running tests
-
-Testing first requires [Building](#building) Spark. Once Spark is built, tests
-can be run using:
-
-`./sbt/sbt test`
- 
-## A Note About Hadoop Versions
-
-Spark uses the Hadoop core library to talk to HDFS and other Hadoop-supported
-storage systems. Because the protocols have changed in different versions of
-Hadoop, you must build Spark against the same version that your cluster runs.
-You can change the version by setting the `SPARK_HADOOP_VERSION` environment
-when building Spark.
-
-For Apache Hadoop versions 1.x, Cloudera CDH MRv1, and other Hadoop
-versions without YARN, use:
-
-    # Apache Hadoop 1.2.1
-    $ SPARK_HADOOP_VERSION=1.2.1 sbt/sbt assembly
-
-    # Cloudera CDH 4.2.0 with MapReduce v1
-    $ SPARK_HADOOP_VERSION=2.0.0-mr1-cdh4.2.0 sbt/sbt assembly
-
-For Apache Hadoop 2.2.X, 2.1.X, 2.0.X, 0.23.x, Cloudera CDH MRv2, and other Hadoop versions
-with YARN, also set `SPARK_YARN=true`:
-
-    # Apache Hadoop 2.0.5-alpha
-    $ SPARK_HADOOP_VERSION=2.0.5-alpha SPARK_YARN=true sbt/sbt assembly
-
-    # Cloudera CDH 4.2.0 with MapReduce v2
-    $ SPARK_HADOOP_VERSION=2.0.0-cdh4.2.0 SPARK_YARN=true sbt/sbt assembly
-
-    # Apache Hadoop 2.2.X and newer
-    $ SPARK_HADOOP_VERSION=2.2.0 SPARK_YARN=true sbt/sbt assembly
-
-When developing a Spark application, specify the Hadoop version by adding the
-"hadoop-client" artifact to your project's dependencies. For example, if you're
-using Hadoop 1.2.1 and build your application using SBT, add this entry to
-`libraryDependencies`:
-
-    "org.apache.hadoop" % "hadoop-client" % "1.2.1"
-
-If your project is built with Maven, add this to your POM file's `<dependencies>` section:
-
-    <dependency>
-      <groupId>org.apache.hadoop</groupId>
-      <artifactId>hadoop-client</artifactId>
-      <version>1.2.1</version>
-    </dependency>
+7. [Scala Support for Vim](https://github.com/scala/scala-dist/tree/master/tool-support/src/vim)
 
 
-## Configuration
+Useful Links for learning Spark     
+====
 
-Please refer to the [Configuration guide](http://spark.apache.org/docs/latest/configuration.html)
-in the online documentation for an overview on how to configure Spark.
-
-
-## Contributing to Spark
-
-Contributions via GitHub pull requests are gladly accepted from their original
-author. Along with any pull requests, please state that the contribution is
-your original work and that you license the work to the project under the
-project's open source license. Whether or not you state this explicitly, by
-submitting any copyrighted material via pull request, email, or other means
-you agree to license the material under the project's open source license and
-warrant that you have the legal authority to do so.
+1. [Fast Data Processing with Spark](http://book.douban.com/subject/25780498/)  I don't recommend this book  
+2. [Spark Overview](http://spark.apache.org/docs/0.9.1/)
+2. [Spark Quick Start](http://spark.apache.org/docs/0.9.1/quick-start.html) A cool tutorial!   
+    [install_scala_sbt.sh](https://gist.github.com/visenger/5496675)
+3. [Spark开发指南（0.8.1中文版）](http://rdc.taobao.org/?p=2024) Cool, but out-of-date  
+4. [Spark Programming Guide](http://spark.apache.org/docs/0.9.1/scala-programming-guide.html#initializing-spark)
+5. [Apache Spark学习：利用Scala语言开发Spark应用程序](http://dongxicheng.org/framework-on-yarn/spark-scala-writing-application/)   
+6. [Writing Standalone Spark Programs](http://ampcamp.berkeley.edu/wp-content/uploads/2012/06/matei-zaharia-part-2-amp-camp-2012-standalone-programs.pdf)   
+7. [Movie Recommendations and More With Spark](http://mlnick.github.io/blog/2013/04/01/movie-recommendations-and-more-with-spark/) A real practice   
