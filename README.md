@@ -32,3 +32,4 @@ Useful Links for learning Spark
 7. [Movie Recommendations and More With Spark](http://mlnick.github.io/blog/2013/04/01/movie-recommendations-and-more-with-spark/) A real practice   
 8. Zaharia M, Chowdhury M, Das T, et al. [Resilient distributed datasets: A fault-tolerant abstraction for in-memory cluster computing](https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf)
 9. Sparks E R, Talwalkar A, Smith V, et al. [MLI: An API for Distributed Machine Learning](http://arxiv-web3.library.cornell.edu/pdf/1310.5426v2.pdf)[J]. arXiv preprint arXiv:1310.5426, 2013.
+10. Xin R S, Gonzalez J E, Franklin M J, et al. [Graphx: A resilient distributed graph system on spark](https://amplab.cs.berkeley.edu/wp-content/uploads/2013/05/grades-graphx_with_fonts.pdf)
