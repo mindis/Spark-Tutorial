@@ -36,7 +36,9 @@ object SparkKMeans {
 
 		// placeholder syntax!!
 		val lines = ctx.textFile("bridge.txt")
-		val data = lines.map(parseVector _).cache()
+		//val data = lines.map(parseVector _).cache()
+		val data = lines.map(parseVector _)
+
 		val K = 2
 		val convergeDist = 0.1
 
