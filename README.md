@@ -3,6 +3,8 @@ Useful Links for learning Scala
 
 1. [Scala overview from stackoverflow](http://stackoverflow.com/tags/scala/info)  
 2. [Programming in Scala by Martin Odersky](http://book.douban.com/subject/3338669/)  A cool textbook for scala
+>Programming in Scala is the definitive book on Scala, the new language for the Java Platform that blends object-oriented and functional programming concepts into a unique and powerful tool for developers.Coauthored by the designer of the Scala language, this authoritative book will teach you, one step at a time, the Scala language and the ideas behind it.The book is carefully crafted to help you learn. The first few chapters will give you enough of the basics that you can already start using Scala for simple tasks. The entire book is organized so that each new concept builds on concepts that came before - a series of steps that promises to help you master the Scala language and the important ideas about programming that Scala embodies.A comprehensive tutorial and reference for Scala, this book covers the entire language and important libraries.
+
 1. [Scala School](http://twitter.github.io/scala_school/index.html) cheatsheet alike
 >About
 Scala school started as a series of lectures at Twitter to prepare experienced engineers to be productive Scala programmers. Scala is a relatively new language, but draws on many familiar concepts. Thus, these lectures assumed the audience knew the concepts and showed how to use them in Scala. We found this an effective way of getting new engineers up to speed quickly. This is the written material that accompanied those lectures. We have found that these are useful in their own right.
