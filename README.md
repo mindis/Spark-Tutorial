@@ -37,3 +37,4 @@ Useful Links for learning Spark
 10. Xin R S, Gonzalez J E, Franklin M J, et al. [Graphx: A resilient distributed graph system on spark](https://amplab.cs.berkeley.edu/wp-content/uploads/2013/05/grades-graphx_with_fonts.pdf)
 
 11. [Build a movie recommender with Spark](http://ampcamp.berkeley.edu/big-data-mini-course/movie-recommendation-with-mllib.html) Yet another cool practical example using spark
+12. [Naives Bayes Contribution history](https://github.com/apache/spark/blob/master/mllib/src/main/scala/org/apache/spark/mllib/classification/NaiveBayes.scala#L81)
