@@ -39,3 +39,4 @@ Useful Links for learning Spark
 11. [Build a movie recommender with Spark](http://ampcamp.berkeley.edu/big-data-mini-course/movie-recommendation-with-mllib.html) Yet another cool practical example using spark
 12. [Naives Bayes Contribution history](https://github.com/apache/spark/blob/master/mllib/src/main/scala/org/apache/spark/mllib/classification/NaiveBayes.scala#L81)
 13. [Spark 源码分析](http://www.cnblogs.com/fxjwind/category/518904.html)
+14. [Machine Learning Library Guide](http://spark.apache.org/docs/0.9.0/mllib-guide.html)
