@@ -1,16 +1,16 @@
 ### Notes about KMeans algorithm   
 1. Some summary   
-	algo guideline 
-	weakness:
-		the initialization of K(by KMeans++)
-		the local limitations
-	notes!:
-		GMM -> EM
-		KMeans -> GMM -> EM
-	parallelization scheme
-	time complexity
-	space complexity
-	speed-up ratio
+	algo guideline   
+	weakness:   
+		the initialization of K(by KMeans++)   
+		the local limitations   
+	notes!:    
+		GMM -> EM    
+		KMeans -> GMM -> EM   
+	parallelization scheme   
+	time complexity   
+	space complexity   
+	speed-up ratio     
 
 ### KeyPoint about the code   
 1. how data flow	
