@@ -1,5 +1,6 @@
 package org.apache.spark.mllib.clustering
 
+import org.apache.spark.mllib.classification.LogisticRegressionModel
 import scala.util.Random
 
 import org.jblas.{ DoubleMatrix, SimpleBlas }

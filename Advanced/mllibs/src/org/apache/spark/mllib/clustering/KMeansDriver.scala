@@ -6,7 +6,7 @@ object KMeansDriver {
   // Load and parse the data
   val sc = new SparkContext("local", "SparkLR", System.getenv("SPARK_HOME"), SparkContext.jarOfClass(this.getClass))
 
-  val data = sc.textFile("bridge.txt")
+  val data = sc.textFile("data/bridge.txt")
   val parsedData = data.map(_.split('\t').map(_.toDouble))
 
   // Cluster the data into two classes using KMeans
