@@ -23,3 +23,4 @@ Partition data via ***mapPartitions***, and find the bestCenter index, the sum a
 
 ###Reference   
 1. [Logistic Regression Outline](https://work.caltech.edu/library/093.pdf)
+2. [Learning From Data Lecture 9](http://www.cs.rpi.edu/~magdon/courses/LFD-Slides/SlidesLect09.swf)
