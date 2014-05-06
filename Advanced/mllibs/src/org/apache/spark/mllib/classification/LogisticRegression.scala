@@ -23,6 +23,8 @@ class LogisticRegressionModel(
   extends GeneralizedLinearModel(weights, intercept)
   with ClassificationModel with Serializable {
 
+  // updated by @chenwq
+  // override predictionPoint method from GeneralizedLinearModel
   override def predictPoint(dataMatrix: DoubleMatrix, weightMatrix: DoubleMatrix,
     intercept: Double) = {
     val margin = dataMatrix.mmul(weightMatrix).get(0) + intercept
@@ -44,6 +46,10 @@ class LogisticRegressionWithSGD private (
 
   val gradient = new LogisticGradient()
   val updater = new SimpleUpdater()
+
+  // updated by @chenwq
+  // override optimizer extends from GeneralizedLinearAlgorithm
+  // the optimizer variable/function is considered as an object in general
   override val optimizer = new GradientDescent(gradient, updater)
     .setStepSize(stepSize)
     .setNumIterations(numIterations)

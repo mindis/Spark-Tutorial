@@ -8,8 +8,7 @@ import org.jblas.DoubleMatrix
 
 /**
  * GeneralizedLinearModel (GLM) represents a model trained using
- * GeneralizedLinearAlgorithm. GLMs consist of a weight vector and
- * an intercept.
+ * GeneralizedLinearAlgorithm. GLMs consist of a weight vector and an intercept.
  *
  * @param weights Weights computed for every feature.
  * @param intercept Intercept computed for this model.
@@ -33,7 +32,7 @@ abstract class GeneralizedLinearModel(val weights: Array[Double], val intercept:
   /**
    * Predict values for the given data set using the model trained.
    *
-   * @param testData RDD representing data points to be predicted
+   * @param testData RDD representing data points to be predicted.	Restrict the type of RDD to be Array[Double]	@chenwq
    * @return RDD[Double] where each entry contains the corresponding prediction
    */
   def predict(testData: RDD[Array[Double]]): RDD[Double] = {
@@ -42,6 +41,7 @@ abstract class GeneralizedLinearModel(val weights: Array[Double], val intercept:
     val localWeights = weightsMatrix
     val localIntercept = intercept
 
+    // prediction operated on some partition of the whole data
     testData.map { x =>
       val dataMatrix = new DoubleMatrix(1, x.length, x: _*)
       predictPoint(dataMatrix, localWeights, localIntercept)
@@ -117,6 +117,7 @@ abstract class GeneralizedLinearAlgorithm[M <: GeneralizedLinearModel]
     }
 
     // Prepend an extra variable consisting of all 1.0's for the intercept.
+    // reformat the data into specified, with intercept or not
     val data = if (addIntercept) {
       input.map(labeledPoint => (labeledPoint.label, 1.0 +: labeledPoint.features))
     } else {
