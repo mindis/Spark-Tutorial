@@ -16,7 +16,7 @@ object LogisticRegressionDriver {
 
   // Run training algorithm to build the model
   val numIterations = 20
-  val model = SVMWithSGD.train(parsedData, numIterations)
+  val model = LogisticRegressionWithSGD.train(parsedData, numIterations)
 
   // Evaluate model on training examples and compute training error
   val labelAndPreds = parsedData.map { point =>
