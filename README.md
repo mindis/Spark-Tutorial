@@ -18,6 +18,7 @@ Scala school started as a series of lectures at Twitter to prepare experienced e
     [Assignments](https://github.com/irwenqiang/functional-programming-principles-in-scala)    
 
 7. [Scala Support for Vim](https://github.com/scala/scala-dist/tree/master/tool-support/src/vim)
+8. [用 Option[T] 来避免 NullPointerException(整理)](http://my.oschina.net/u/200745/blog/69845) 
 
 
 Useful Links for learning Spark     
