@@ -4,7 +4,7 @@ import scala.collection.mutable
 
 import org.jblas.DoubleMatrix
 
-import org.apache.spark.{SparkContext, Logging}
+import org.apache.spark.{ SparkContext, Logging }
 import org.apache.spark.mllib.regression.LabeledPoint
 import org.apache.spark.rdd.RDD
 import org.apache.spark.mllib.util.MLUtils
@@ -39,9 +39,11 @@ class NaiveBayesModel(val pi: Array[Double], val theta: Array[Array[Double]])
  * document classification.  By making every vector a 0-1 vector, it can also be used as
  * Bernoulli NB ([[http://tinyurl.com/p7c96j6]]).
  */
+// see http://nlp.stanford.edu/IR-book/html/htmledition/naive-bayes-text-classification-1.html
+// and http://nlp.stanford.edu/IR-book/html/htmledition/the-bernoulli-model-1.html  
+// for detail about Naive Bayes
 class NaiveBayes private (var lambda: Double)
-  extends Serializable with Logging
-{
+  extends Serializable with Logging {
   def this() = this(1.0)
 
   /** Set the smoothing parameter. Default: 1.0. */
@@ -59,7 +61,7 @@ class NaiveBayes private (var lambda: Double)
     // Aggregates all sample points to driver side to get sample count and summed feature vector
     // for each label.  The shape of `zeroCombiner` & `aggregated` is:
     //
-    //    label: Int -> (count: Int, featuresSum: DoubleMatrix)
+    // label: Int -> (count: Int, featuresSum: DoubleMatrix)
     val zeroCombiner = mutable.Map.empty[Int, (Int, DoubleMatrix)]
     val aggregated = data.aggregate(zeroCombiner)({ (combiner, point) =>
       point match {
