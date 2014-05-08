@@ -42,3 +42,4 @@ Useful Links for learning Spark
 13. [Spark 源码分析](http://www.cnblogs.com/fxjwind/category/518904.html)
 14. [Machine Learning Library Guide](http://spark.apache.org/docs/0.9.0/mllib-guide.html)
 15. [Spark clips](http://u.memect.com/103/?tag=spark)
+16. [Spark0.9.0机器学习包MLlib-Optimization代码阅读](http://www.cnblogs.com/kobedeshow/p/3622997.html)
