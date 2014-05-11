@@ -37,7 +37,7 @@ Useful Links for learning Spark
 9. Sparks E R, Talwalkar A, Smith V, et al. [MLI: An API for Distributed Machine Learning](http://arxiv-web3.library.cornell.edu/pdf/1310.5426v2.pdf)[J]. arXiv preprint arXiv:1310.5426, 2013.
 10. Xin R S, Gonzalez J E, Franklin M J, et al. [Graphx: A resilient distributed graph system on spark](https://amplab.cs.berkeley.edu/wp-content/uploads/2013/05/grades-graphx_with_fonts.pdf)
 
-11. [Build a movie recommender with Spark](http://ampcamp.berkeley.edu/big-data-mini-course/movie-recommendation-with-mllib.html) Yet another cool practical example using spark
+11. [Build a movie recommender with Spark](http://ampcamp.berkeley.edu/big-data-mini-course/movie-recommendation-with-mllib.html) Yet another cool practical example using spark, the data preprocessing before using ALS algorithm implemented in MLLibs is impressive
 12. [Naives Bayes Contribution history](https://github.com/apache/spark/blob/master/mllib/src/main/scala/org/apache/spark/mllib/classification/NaiveBayes.scala#L81)
 13. [Spark 源码分析](http://www.cnblogs.com/fxjwind/category/518904.html)
 14. [Machine Learning Library Guide](http://spark.apache.org/docs/0.9.0/mllib-guide.html)
